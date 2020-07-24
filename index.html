@@ -49,26 +49,26 @@ function rand(max) {
     return Math.floor(Math.random() * (max + 1));
 }
 // -----------------------------------------------------------------------------
-function render(text, fn) {
+function render(fn, text) {
     var i = 20;
     var o = rand(256);
     function eachLine() {
       i -= 1;
       lolcat.options.seed = o + i;
     }
-    return lolcat.format(renderFiglet(text), fn, eachLine).join('\n');
+    return lolcat.format(fn, renderFiglet(text), eachLine).join('\n');
 }
 // -----------------------------------------------------------------------------
 fonts().then(function() {
     var styles = [];
     // render Style console in Browser
-    console.log(render('Isomorphic Lolcat', function(char, color) {
+    console.log(render(function(char, color) {
         styles.push(`color: ${hex(color)}; background: black`);
         return `%c${char}`;
-    }), ...styles);
-    document.getElementsByTagName('pre')[0].innerHTML = render('Isomorphic Lolcat', function(char, color) {
+    }, 'Isomorphic Lolcat'), ...styles);
+    document.getElementsByTagName('pre')[0].innerHTML = render(function(char, color) {
         return `<span style="--color: ${hex(color)}">${char}</span>`;
-    })
+    }, 'Isomorphic Lolcat')
 });
 </script>
 </body>
