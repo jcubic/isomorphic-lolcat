@@ -48,7 +48,7 @@
         }
     };
     
-    module.rainbow = function render(string, fn) {
+    module.rainbow = function render(fn, string) {
         var i = 20;
         var o = rand(256);
         function eachLine() {
@@ -58,7 +58,7 @@
         return lolcat.format(fn, string, eachLine);
     };
     
-    module.format = function format(string, format, onLine) {
+    module.format = function format(format, string, eachLine) {
         var output = [];
         var input = string.split('\n');
         var line;
@@ -68,7 +68,7 @@
         }
         for (var i = 0; i < input.length; ++i) {
             line = [];
-            onLine(i);
+            eachLine(i);
             printlnPlain(buff, input[i]);
             output.push(line.join(''));
         }

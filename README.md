@@ -30,7 +30,7 @@ Browser
 
 ## API
 
-* **lolcat.format(input: string, (char: string, color: color) => string, (line: number) => void): string[]**
+* **lolcat.format((char: string, color: color) => string, input: string, (line: number) => void): string[]**
 
 Low lovel function, first argument is function that is called on each character.
 First argument to function is single character second is object with `red`,
@@ -60,7 +60,7 @@ console.log(lolcat.format(function(char, color) {
 }, 'Lorem Ipsum Dolor Sit Amet', eachLine), ...styles);
 ```
 
-* **lolcat.rainbow(input: string, (char: string, color: Color) => string): string[]**
+* **lolcat.rainbow((char: string, color: Color) => string, input: string): string[]**
 
 Shortcut using above example that use default seed for each line.
 
