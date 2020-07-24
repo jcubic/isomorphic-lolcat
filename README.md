@@ -1,4 +1,4 @@
-# Isomorphic LolCat
+# Isomorphic Lolcat
 
 Small library based on [lolcatjs](https://github.com/robertmarsal/lolcatjs)
 that can be used in Node.js or Browser, to render gradient text.
