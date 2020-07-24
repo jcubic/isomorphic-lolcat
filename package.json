@@ -1,0 +1,28 @@
+{
+  "name": "isomorphic-lolcat",
+  "version": "0.1.0",
+  "description": "Lolcat gradient that can be used in browser or Node",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcubic/isomorphic-lolcat.git"
+  },
+  "keywords": [
+    "lolcat",
+    "lol",
+    "cat",
+    "string",
+    "color",
+    "gradient",
+    "isomorphic",
+    "rainbow"
+  ],
+  "author": "Jakub T. Jankiewicz <jcubic@onet.pl> (https://jcubic.pl/jakub-jankiewicz/)",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/jcubic/isomorphic-lolcat/issues"
+  },
+  "homepage": "https://github.com/jcubic/isomorphic-lolcat#readme"
+}
