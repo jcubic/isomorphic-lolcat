@@ -25,7 +25,7 @@ const lolcat = require('isomorphic-lolcat');
 Browser
 
 ```html
-<script src="https://unpkg.com/isomorphic-lolcat"></script>
+<script src="https://cdn.jsdelivr.net/npm/isomorphic-lolcat"></script>
 ```
 
 ## API
@@ -41,9 +41,9 @@ Return array of string value is single lolcat string.
 ### Example
 
 ```javascript
-var styles = [];
-var i = 20;
-var o = rand(256);
+const styles = [];
+let i = 20;
+const o = rand(256);
 function eachLine() {
   i -= 1;
   lolcat.options.seed = o + i;
@@ -62,7 +62,19 @@ console.log(lolcat.format(function(char, color) {
 
 * **lolcat.rainbow((char: string, color: Color) => string, input: string): string[]**
 
-Shortcut using above example that use default seed for each line.
+Shortcut using above example that use default seed for each line:
+
+
+```javascript
+const styles = [];
+
+function format(char, color) {
+    styles.push(`color: ${hex(color)}; background: black`);
+    return `%c${char}`;
+}
+
+console.log(lolcat.rainbow(format, 'Lorem Ipsum Dolor Sit Amet').join('\n'), ...styles);
+```
 
 * **lolcat.options**
 

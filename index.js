@@ -41,13 +41,17 @@
             blue:  blue
         }
     };
-    
+
     var printlnPlain = function(colorize, line) {
         for (var i = 0; i < line.length; i++) {
             colorize(line[i], rainbow(options.freq, options.seed + i / options.spread));
         }
     };
-    
+
+    var rand = function(max) {
+        return Math.floor(Math.random() * (max + 1));
+    };
+
     module.rainbow = function render(fn, string) {
         var i = 20;
         var o = rand(256);
@@ -57,7 +61,7 @@
         }
         return lolcat.format(fn, string, eachLine);
     };
-    
+
     module.format = function format(format, string, eachLine) {
         var output = [];
         var input = string.split('\n');
