@@ -60,7 +60,7 @@ console.log(lolcat.format(function(char, color) {
 }, 'Lorem Ipsum Dolor Sit Amet', eachLine), ...styles);
 ```
 
-* **lolcat.rainbow((char: string, color: Color) => string, input: string): string[]**
+* **lolcat.rainbow((char: string, color: Color) => string, input: string, seed: number): string[]**
 
 Shortcut using above example that use default seed for each line:
 

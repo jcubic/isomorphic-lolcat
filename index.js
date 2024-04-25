@@ -52,9 +52,9 @@
         return Math.floor(Math.random() * (max + 1));
     };
 
-    module.rainbow = function render(fn, string) {
+    module.rainbow = function render(fn, string, seed) {
         var i = 20;
-        var o = rand(256);
+        var o = seed || rand(256);
         function eachLine() {
           i -= 1;
           lolcat.options.seed = o + i;
