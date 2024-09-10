@@ -59,13 +59,14 @@
           i -= 1;
           lolcat.options.seed = o + i;
         }
-        return lolcat.format(fn, string, eachLine);
+        return module.format(fn, string, eachLine);
     };
 
     module.format = function format(format, string, eachLine) {
         var output = [];
         var input = string.split('\n');
         var line;
+        var onLine;
         onLine = typeof onLine === 'function' ? onLine : function() {};
         function buff(char, color) {
             line.push(format(char, color));
