@@ -21,7 +21,7 @@ pre span {
 <h1>Isomorphic Lolcat Demo</h1>
 <pre></pre>
 <p>Check also Developer Tools Console</p>
-<script src="https://unpkg.com/figlet/lib/figlet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/figlet/lib/figlet.js"></script>
 <script src="index.js"></script>
 <script>
 
@@ -39,7 +39,7 @@ function renderFiglet(text, font) {
 // -----------------------------------------------------------------------------
 function fonts() {
     return new Promise(resolve => {
-        figlet.defaults({fontPath: 'https://unpkg.com/figlet@1.4.0/fonts/'});
+        figlet.defaults({ fontPath: 'https://cdn.jsdelivr.net/npm/figlet/fonts' });
         var fonts = ['Colossal'];
         figlet.preloadFonts(fonts, resolve);
     });
