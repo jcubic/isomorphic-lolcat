@@ -57,7 +57,7 @@
         var o = seed || rand(256);
         function eachLine() {
           i -= 1;
-          lolcat.options.seed = o + i;
+          module.options.seed = o + i;
         }
         return module.format(fn, string, eachLine);
     };
